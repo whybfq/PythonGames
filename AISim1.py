@@ -13,7 +13,7 @@ def drawBoard(board):
             print(board[x][y], end='')
         print('|%s' % (y+1))
     print(' +--------+')
-    print('  12345678')
+    print('  12345678')`
 
 def getNewBoard():
     # Creates a brand-new, blank board data structure.
