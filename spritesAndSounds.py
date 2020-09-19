@@ -19,7 +19,7 @@ player = pygame.Rect(300, 100, 40, 40)
 playerImage = pygame.image.load('player.png')
 playerStretchedImage = pygame.transform.scale(playerImage, (40, 40))
 foodImage = pygame.image.load('cherry.png')
-foods = []
+foods = [ ]
 for i in range(20):
     foods.append(pygame.Rect(random.randint(0, WINDOWWIDTH - 20), random.randint(0, WINDOWHEIGHT - 20), 20, 20))
 
@@ -84,7 +84,7 @@ while True:
                 musicPlaying = not musicPlaying
 
         if event.type == MOUSEBUTTONUP:
-            foods.append(pygame.Rect(event.pos[0] - 10, event.pos[1] - 10, 20, 20))
+            foods.append(pygame.Rect(event.pos[ 0 ] - 10, event.pos[ 1 ] - 10, 20, 20))
 
     foodCounter += 1
     if foodCounter >= NEWFOOD:
@@ -105,12 +105,11 @@ while True:
     if moveRight and player.right < WINDOWWIDTH:
         player.right += MOVESPEED
 
-
     # Draw the block onto the surface.
     windowSurface.blit(playerStretchedImage, player)
 
     # Check whether the block has intersected with any food squares.
-    for food in foods[:]:
+    for food in foods[ : ]:
         if player.colliderect(food):
             foods.remove(food)
             player = pygame.Rect(player.left, player.top, player.width + 2, player.height + 2)
@@ -124,4 +123,4 @@ while True:
 
     # Draw the window onto the screen.
     pygame.display.update()
-    mainClock.tick(40 )
+    mainClock.tick(40)
