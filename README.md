@@ -1,4 +1,4 @@
 # PythonGames
 inventpythonGames
 
-The book: inventWithPython resources
+Follow The book: inventWithPython resources
