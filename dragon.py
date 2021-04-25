@@ -1,12 +1,14 @@
 import random
 import time
 
+
 def displayIntro():
     print('''You are in a land full of dragons. In front of you,
 you see two caves. In one cave, the dragon is friendly
 and will share his treasure with you. The other dragon
 is greedy and hungry, and will eat you on sight.''')
     print()
+
 
 def chooseCave():
     cave = ''
@@ -15,6 +17,7 @@ def chooseCave():
         cave = input()
 
     return cave
+
 
 def checkCave(chosenCave):
     print('You approach the cave...')
@@ -28,9 +31,10 @@ def checkCave(chosenCave):
     friendlyCave = random.randint(1, 2)
 
     if chosenCave == str(friendlyCave):
-         print('Gives you his treasure!')
+        print('Gives you his treasure!')
     else:
-         print('Gobbles you down in one bite!')
+        print('Gobbles you down in one bite!')
+
 
 playAgain = 'yes'
 while playAgain == 'yes' or playAgain == 'y':
